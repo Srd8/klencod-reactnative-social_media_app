@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تطبيق التواصل الاجتماعي</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- صفحة تسجيل الدخول -->
+    <div id="login-page" class="page active">
+        <div class="auth-card">
+            <div class="logo-container">
+                <svg class="app-logo-svg" viewBox="0 0 100 100">
+                    <defs>
+                        <linearGradient id="grad" x1="0%" y1="100%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#f09433;stop-opacity:1" />
+                            <stop offset="25%" style="stop-color:#e6683c;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#dc2743;stop-opacity:1" />
+                            <stop offset="75%" style="stop-color:#cc2366;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#bc1888;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <rect x="5" y="5" width="90" height="90" rx="25" fill="url(#grad)"/>
+                    <rect x="22" y="22" width="56" height="56" rx="16" fill="none" stroke="#ffffff" stroke-width="6"/>
+                    <circle cx="50" cy="50" r="16" fill="none" stroke="#ffffff" stroke-width="6"/>
+                    <circle cx="66" cy="34" r="5" fill="#ffffff"/>
+                </svg>
+                <h1 class="brand-title">SocialApp</h1>
+            </div>
+            
+            <form id="login-form" class="auth-form">
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="login-email" placeholder="البريد الإلكتروني" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="login-password" placeholder="كلمة المرور" required>
+                </div>
+                <button type="submit" class="btn-primary">تسجيل الدخول</button>
+            </form>
+            
+            <div class="auth-footer">
+                <p>ليس لديك حساب؟ <a href="#" id="show-signup">إنشاء حساب جديد</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- صفحة إنشاء حساب -->
+    <div id="signup-page" class="page">
+        <div class="auth-card">
+            <div class="logo-container">
+                <svg class="app-logo-svg" viewBox="0 0 100 100">
+                    <rect x="5" y="5" width="90" height="90" rx="25" fill="url(#grad)"/>
+                    <rect x="22" y="22" width="56" height="56" rx="16" fill="none" stroke="#ffffff" stroke-width="6"/>
+                    <circle cx="50" cy="50" r="16" fill="none" stroke="#ffffff" stroke-width="6"/>
+                    <circle cx="66" cy="34" r="5" fill="#ffffff"/>
+                </svg>
+                <h1 class="brand-title">SocialApp</h1>
+            </div>
+            
+            <form id="signup-form" class="auth-form">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="signup-username" placeholder="اسم المستخدم" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="signup-email" placeholder="البريد الإلكتروني" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="signup-password" placeholder="كلمة المرور" required>
+                </div>
+                <button type="submit" class="btn-primary">إنشاء الحساب</button>
+            </form>
+            
+            <div class="auth-footer">
+                <p>لديك حساب بالفعل؟ <a href="#" id="show-login">تسجيل الدخول</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- الصفحة الرئيسية -->
+    <div id="main-page" class="page">
+        <!-- شريط العلوي -->
+        <header class="app-header">
+            <div class="header-logo">
+                <span>SocialApp</span>
+            </div>
+            <div class="header-actions">
+                <div class="lang-selector">
+                    <i class="fas fa-globe"></i>
+                    <select id="lang-select">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+                <button id="theme-toggle" class="icon-btn"><i class="fas fa-moon"></i></button>
+                <button class="icon-btn"><i class="far fa-heart"></i></button>
+                <button class="icon-btn"><i class="fab fa-facebook-messenger"></i></button>
+            </div>
+        </header>
+
+        <!-- المحتوى الرئيسي -->
+        <main class="app-body">
+            <!-- شريط القصص (Stories) -->
+            <section class="stories-wrapper">
+                <div class="stories-scroll">
+                    <div class="story-item my-story">
+                        <div class="story-avatar-container">
+                            <img src="https://picsum.photos/100/100?random=1" alt="قصتك" class="story-avatar">
+                            <div class="add-story-btn"><i class="fas fa-plus"></i></div>
+                        </div>
+                        <span data-i18n="your_story">قصتك</span>
+                    </div>
+                    <div class="story-item">
+                        <div class="story-avatar-container active">
+                            <img src="https://picsum.photos/100/100?random=2" alt="أحمد">
+                        </div>
+                        <span>ahmed_v</span>
+                    </div>
+                    <div class="story-item">
+                        <div class="story-avatar-container active">
+                            <img src="https://picsum.photos/100/100?random=3" alt="سارة">
+                        </div>
+                        <span>sara_m</span>
+                    </div>
+                    <div class="story-item">
+                        <div class="story-avatar-container active">
+                            <img src="https://picsum.photos/100/100?random=4" alt="عمر">
+                        </div>
+                        <span>omar_tech</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- تغذية المنشورات (Feed) -->
+            <section id="feed-container" class="feed-container">
+                <!-- المنشورات سيتم توليدها ديناميكياً -->
+            </section>
+        </main>
+
+        <!-- نافذة الإعدادات والخطوط -->
+        <div id="settings-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 data-i18n="settings">الإعدادات</h3>
+                    <span class="close-modal">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div class="setting-item">
+                        <label data-i18n="font_family">نوع الخط:</label>
+                        <select id="font-family-select">
+                            <option value="system-ui">الافتراضي (System)</option>
+                            <option value="'Tajawal', sans-serif">Tajawal</option>
+                            <option value="'Cairo', sans-serif">Cairo</option>
+                            <option value="'Roboto', sans-serif">Roboto</option>
+                        </select>
+                    </div>
+                    <div class="setting-item">
+                        <label data-i18n="font_size">حجم الخط:</label>
+                        <select id="font-size-select">
+                            <option value="14px">صغير</option>
+                            <option value="16px" selected>متوسط</option>
+                            <option value="18px">كبير</option>
+                        </select>
+                    </div>
+                    <div class="setting-item">
+                        <button id="logout-btn" class="btn-danger" data-i18n="logout">تسجيل الخروج</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- الشريط السفلي للتنقل -->
+        <nav class="bottom-nav">
+            <button class="nav-item active"><i class="fas fa-home"></i></button>
+            <button class="nav-item"><i class="fas fa-search"></i></button>
+            <button class="nav-item"><i class="far fa-plus-square"></i></button>
+            <button class="nav-item"><i class="fas fa-clapperboard"></i></button>
+            <button class="nav-item" id="open-settings"><i class="fas fa-cog"></i></button>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
